@@ -5,7 +5,7 @@ This is a small javascript based two player ping pong game.
 
 ## How to use?
 - `git clone git@github.com:sarthakeddy/Ping-Pong-Game.git`
-- `cd Ping-Pong-Game/`
+- `cd Ping-Pong-Game/Game-TT/`
 - Enter in the repo and run html file with Live Server.
 - Game Begins.
 - Enter the names of two players and start the game.

@@ -8,7 +8,7 @@ let score2 = 0;
 let currentRod = rod2;
 let gameStart = false;
 let xDirec, yDirec;
-
+let p1Name, p2Name;
 let l1 = document.getElementsByClassName("heart1");
 let l2 = document.getElementsByClassName("heart2");
 let livesNo1 = 3,
@@ -18,23 +18,37 @@ let notIntial = true,
   id;
 let startB = document.getElementById("start-button");
 let newGameB = document.getElementById("new-game-button");
+let beginGame = document.getElementById("begin-button");
 let scoreDisp1 = document.getElementById("score-display1");
 let scoreDisp2 = document.getElementById("score-display2");
+let formName = document.getElementById("name-input");
 
 newGameB.addEventListener("click", newGame);
 startB.addEventListener("click", visibleScreen);
+beginGame.addEventListener("click", nameInput);
 document.addEventListener("keydown", moveRod);
 document.addEventListener("keypress", launchBall);
 window.addEventListener("resize", setGame);
 
 setGame(); //to set game intially
 
+function nameInput() {
+  p1Name = "Player 1";
+  p2Name = "Player 2";
+  let id = document.getElementById("form1");
+  p1Name = id.elements[0].value;
+  p2Name = id.elements[1].value;
+  console.log(p1Name);
+  console.log(p2Name);
+  formName.classList.add("hidden");
+}
+
 /*to start new game*/
 function newGame() {
   clearInterval(id);
   document.getElementById("body-container").classList.add("blurry");
-
   startB.classList.remove("hidden");
+  formName.classList.remove("hidden");
   currentRod = rod2;
   for (let i = 0; i < 3; i++) {
     l1[i].style.visibility = "visible";
@@ -202,8 +216,8 @@ function setBallPosition() {
       notIntial = false;
       setGame();
       if (livesNo1 == 0) {
-        if (score1 > score2) alert("Winner is player 1");
-        else if (score2 > score1) alert("Winner is player 2");
+        if (score1 > score2) alert("Winner is " + p1Name);
+        else if (score2 > score1) alert("Winner is " + p2Name);
         else alert("It's a Tie");
 
         newGame();
@@ -231,8 +245,8 @@ function setBallPosition() {
       notIntial = false;
       setGame();
       if (livesNo2 == 0) {
-        if (score1 > score2) alert("Winner is player 1");
-        else if (score2 > score1) alert("Winner is player 2 ");
+        if (score1 > score2) alert("Winner is " + p1Name);
+        else if (score2 > score1) alert("Winner is " + p2Name);
         else alert("It's a Tie");
         newGame();
       }

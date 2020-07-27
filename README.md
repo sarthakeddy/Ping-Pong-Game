@@ -12,6 +12,12 @@ This is a small javascript based two player ping pong game.
 - Left and right arrow keys help in moving rod 1 of Player 1.
 - 'A' and 'D' keys help in moving rod 2 of Player 2.
 
+## Screens
+![Starting Page](Images/first.png "First")
+![Game Page](Images/second.png "First")
+![Ball](Images/third.png "First")
+![Winner](Images/fourth.png "First")
+
 ## Get in touch
 [<img src="https://image.flaticon.com/icons/svg/185/185964.svg" width="35" padding="10">](https://www.linkedin.com/in/sarthakeddy/)
 [<img src="https://image.flaticon.com/icons/svg/185/185985.svg" width="35" padding="10">](https://www.instagram.com/sarthak.eddy/)
